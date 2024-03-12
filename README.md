@@ -37,7 +37,7 @@ $ npm run db:push # npm
 
 - `/v1/messages`
   - Query:
-    - `cursor` for pagination
+    - `cursor` base64 encoded string for pagination
     - `take` total item per-request
   - Return:
       ```typescript
