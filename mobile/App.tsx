@@ -3,6 +3,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import React, { useCallback, useEffect } from 'react';
 
 import ChatScreen from './modules/chat/screens/ChatScreen';
+import { RQProvider } from './modules/shared/libs/react-query';
 
 const App = () => {
   const [fontsLoaded, fontError] = useFonts({
@@ -25,7 +26,11 @@ const App = () => {
     return null;
   }
 
-  return <ChatScreen />;
+  return (
+    <RQProvider>
+      <ChatScreen />
+    </RQProvider>
+  );
 };
 
 export default App;

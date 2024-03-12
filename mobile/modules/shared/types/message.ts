@@ -5,3 +5,8 @@ export type Message = {
   senderId: number;
   receiverId: number;
 };
+
+export type GroupedMessagesByTime = {
+  date: string;
+  data: Message[];
+};
