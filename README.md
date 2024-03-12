@@ -40,6 +40,8 @@ $ npm run db:push # npm
 
 ### Server Endpoint:
 
+Deployed URL: https://fullstack-chat.iyansr.id/
+
 - `/v1/messages`
   - Query:
     - `cursor` base64 encoded string for pagination
