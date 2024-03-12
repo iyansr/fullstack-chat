@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && tsc-alias",
     "start": "node dist/main.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push"
   },
   "keywords": [],
   "author": "",

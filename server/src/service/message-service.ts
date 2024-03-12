@@ -31,8 +31,6 @@ class MessageService {
     const lastMessages = messages[messages.length - 1];
     const cursor = lastMessages.id;
 
-    const cursorBase64 = Buffer.from(cursor).toString('base64');
-
     const nextPage = await prismaClient.message.findMany({
       take: take ?? 10,
       skip: 1,
@@ -40,6 +38,8 @@ class MessageService {
         id: cursor,
       },
     });
+
+    const cursorBase64 = Buffer.from(cursor).toString('base64');
 
     return {
       data: messages,

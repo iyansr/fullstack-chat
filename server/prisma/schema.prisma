@@ -10,9 +10,10 @@ datasource db {
 model Message {
   id         String   @id @default(cuid())
   content    String
-  createdAt  DateTime @default(now())
-  senderId   Int
-  receiverId Int
+  createdAt  DateTime @default(now()) @map("created_at")
+  senderId   Int      @map("sender_id")
+  receiverId Int      @map("receiver_id")
 
   @@index([senderId, receiverId])
+  @@map("messages")
 }
