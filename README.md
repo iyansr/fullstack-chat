@@ -1,7 +1,12 @@
 # FullStack Chat
 
+
+https://github.com/iyansr/fullstack-chat/assets/42711013/5bc281c3-646f-4811-9df7-9157c53dcad8
+
+
 ## Stack
 - React Native
+- Expo
 - Typescript
 - Prisma
 - NodeJS
