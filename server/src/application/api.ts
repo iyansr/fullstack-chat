@@ -8,3 +8,6 @@ export const api = express();
 api.use(express.json());
 api.use(errorMiddleware);
 api.use('/v1', publicRouter);
+api.get('/', (_req, res) => {
+  return res.json({ message: 'OK' });
+});
